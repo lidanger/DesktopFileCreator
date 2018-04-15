@@ -37,7 +37,7 @@ private:
 
     QString iconfile;
 
-    QString isTerminal;
+    QString isTerminal = "false";
 
 };
 
