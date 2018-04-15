@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/icon">
+        <file>folder.svg</file>
+        <file>application-x-executable.svg</file>
+    </qresource>
+</RCC>
