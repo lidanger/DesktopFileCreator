@@ -30,7 +30,7 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(Selectdir,SIGNAL(triggered()),this,SLOT(is_Selectdir_triggered()));
 
     QString home = QProcessEnvironment::systemEnvironment().value("HOME");
-    ui->lineEdit_dir->setText(home + "/Desktop/");
+    ui->lineEdit_dir->setText(home + "/Desktop");
 
     //setAttribute(Qt::WA_TranslucentBackground,true); //主窗体全透明，控件不透明，不可取
 }
@@ -42,7 +42,7 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_toolButton_clicked()
 {
-    iconfile = QFileDialog::getOpenFileName(this,"选择应用图标",".","图片文件(*.png *.svg *.jpg *.icon *.jpeg);;全部文件(*)");
+    iconfile = QFileDialog::getOpenFileName(this,"选择应用图标","~","图片文件(*.png *.svg *.jpg *.icon *.jpeg);;全部文件(*)");
     QIcon appicon;
     appicon.addFile(iconfile);
     ui->toolButton->setIcon(appicon);
@@ -50,7 +50,7 @@ void MainWindow::on_toolButton_clicked()
 
 void MainWindow::is_Selectbin_triggered()
 {
-    QString file = QFileDialog::getOpenFileName(this,"选择应用程序",".","脚本文件(*.sh);;全部文件(*)");
+    QString file = QFileDialog::getOpenFileName(this,"选择应用程序",ui->lineEdit_exec->text(),"脚本文件(*.sh);;全部文件(*)");
     ui->lineEdit_exec->setText(file);
 }
 
@@ -76,7 +76,7 @@ void MainWindow::on_toolButton_2_clicked()
 {
     QString file = ui->lineEdit_file->text() + ".desktop";
     QString dir = ui->lineEdit_dir->text();
-    QFile desktopfile(dir + file);
+    QFile desktopfile(dir + "/" + file);
 
     QMessageBox mbq(QMessageBox::Question,"文件已存在","覆盖？");
     mbq.setStandardButtons(QMessageBox::Yes|QMessageBox::No);
@@ -119,7 +119,7 @@ void MainWindow::on_toolButton_2_clicked()
 
 void MainWindow::is_Selectdir_triggered()
 {
-    QString dir = QFileDialog::getExistingDirectory(this,"选择保存路径",".");
+    QString dir = QFileDialog::getExistingDirectory(this,"选择保存路径",ui->lineEdit_dir->text());
     ui->lineEdit_dir->setText(dir);
 }
 
