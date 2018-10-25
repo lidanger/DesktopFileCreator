@@ -4,10 +4,11 @@
 
 二、从终端编译
 
-
-    $ cd path_to_project
+    $ git clone https://github.com/FeihongKing/DesktopFileCreator.git
+    $ cd DesktopFileCreator
     $ mkdir build
     $ cd build
-    $ qmake ../
+    $ qmake ..
     $ make 
+    $ ./DesktopFileCreator
     
