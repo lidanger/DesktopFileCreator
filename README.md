@@ -6,12 +6,8 @@
 
 
     $ cd path_to_project
-    
     $ mkdir build
-    
     $ cd build
-    
     $ qmake ../
-    
     $ make 
     
