@@ -1,3 +1,11 @@
-#DesktopFileCreator
+#桌面文件创建工具
 
-需要使用QtCreator编译运行，对于其它编译方式未做任何测试。
+一、使用QtCreator编译，直接导入项目编译即可。
+
+二、从终端编译
+    $ cd path_to_project
+    $ mkdir build
+    $ cd build
+    $ qmake ../
+    $ make 
+    
