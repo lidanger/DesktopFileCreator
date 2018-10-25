@@ -5,9 +5,13 @@
 二、从终端编译
 
 
-$ cd path_to_project
+    $ cd path_to_project
+    
     $ mkdir build
+    
     $ cd build
+    
     $ qmake ../
+    
     $ make 
     
