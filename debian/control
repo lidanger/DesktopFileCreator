@@ -1,0 +1,18 @@
+Source: desktop-file-creator
+Section: utils
+Priority: optional
+Maintainer: FeihongKing <946488029@qq.com>
+Build-Depends: debhelper (>= 9),
+ qt5-default,
+ qt5-qmake,
+ qttools5-dev-tools,
+ qtbase5-private-dev,
+ qtbase5-dev
+Standards-Version: 0.9.0
+Homepage: https://github.com/FeihongKing/DesktopFileCreator
+
+Package: desktop-file-creator
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: 桌面文件创建工具
+ 用于在GNU/Linux系统下创建桌面(.desktop)文件

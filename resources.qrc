@@ -1,6 +1,6 @@
 <RCC>
-    <qresource prefix="/icon">
-        <file>folder.svg</file>
-        <file>application-x-executable.svg</file>
+    <qresource prefix="/">
+        <file>images/folder.svg</file>
+        <file>images/application-x-executable.svg</file>
     </qresource>
 </RCC>

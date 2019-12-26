@@ -3,7 +3,8 @@
 
 #include <QMainWindow>
 
-namespace Ui {
+namespace Ui
+{
 class MainWindow;
 }
 
@@ -38,7 +39,6 @@ private:
     QString iconfile;
 
     QString isTerminal = "false";
-
 };
 
 #endif // MAINWINDOW_H

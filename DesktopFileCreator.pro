@@ -8,7 +8,7 @@ QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-TARGET = DesktopFileCreator
+TARGET = desktop-file-creator
 TEMPLATE = app
 
 # The following define makes your compiler emit warnings if you use
@@ -35,3 +35,13 @@ FORMS += \
 
 RESOURCES += \
     resources.qrc
+
+target.path = /usr/bin/
+
+desktop_files.path = /usr/share/applications/
+desktop_files.files = desktop-file-creator.desktop
+
+icon_files.files = images/desktop-file-creator.png
+icon_files.path = /usr/share/icons/hicolor/256x256/apps/
+
+INSTALLS += target desktop_files icon_files
